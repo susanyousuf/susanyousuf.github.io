@@ -1,125 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Susan Yousuf | Data Science · American University</title>
 <meta name="author" content="Susan Yousuf">
-<link rel="canonical" href="https://susanyousuf.com/">
 <meta name="description" content="M.S. Data Science student at American University studying causal inference, survey methodology, and machine learning for health and public policy.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://susanyousuf.com/">
+<link rel="canonical" href="https://susanyousuf.com/">
 <meta property="og:title" content="Susan Yousuf">
 <meta property="og:description" content="M.S. Data Science student at American University studying causal inference, survey methodology, and machine learning for health and public policy.">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Susan Yousuf">
-<meta name="twitter:description" content="M.S. Data Science student at American University studying causal inference, survey methodology, and machine learning for health and public policy.">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Susan Yousuf",
-  "url": "https://susanyousuf.com/",
-  "email": "mailto:susan@susanyousuf.com",
-  "affiliation": {
-    "@type": "CollegeOrUniversity",
-    "name": "American University"
-  },
-  "knowsAbout": ["Data Science", "Machine Learning", "Causal Inference", "Survey Methods", "Public Policy", "Population Health"],
-  "sameAs": [
-    "https://github.com/susanyousuf",
-    "https://linkedin.com/in/susanyousuf",
-    "https://x.com/susanyousuf"
-  ]
-}
-</script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://susanyousuf.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    color: #24292f;
-    max-width: 600px;
-    margin: 60px auto;
-    padding: 0 20px;
-    line-height: 1.6;
-}
-h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-h2 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #24292f;
-    margin: 28px 0 6px;
-}
-.subtitle {
+  :root {
+    --bg: #ffffff;
+    --ink: #3b2f2a;
+    --text: #2b2b2b;
+    --muted: #666;
+    --link: #1a5fa8;
+    --rule: #dedede;
+    --tag-bg: #f3efec;
+    --card: #fbfaf9;
+  }
+  * { box-sizing: border-box; }
+  body {
     margin: 0;
-    color: #57606a;
-}
-.details {
-    margin-top: 4px;
-    color: #6e7781;
-    font-size: 0.9rem;
-}
-p {
-    color: #57606a;
-    font-size: 1rem;
-}
-.muted {
-    color: #8c959f;
-    font-style: italic;
-    margin-top: 0;
-}
-hr {
-    border: 0;
-    border-top: 1px solid #d0d7de;
-    margin: 24px 0;
-}
-.link-row {
-    margin-top: 20px;
-}
-a {
-    color: #0969da;
-    text-decoration: none;
-    font-weight: 500;
-}
-a:hover {
-    text-decoration: underline;
-}
-.separator {
-    color: #d0d7de;
-    margin: 0 10px;
-}
-footer {
-    color: #8c959f;
-    font-size: 0.8rem;
-}
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Outfit", system-ui, sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .page { max-width: 980px; margin: 0 auto; padding: 48px 24px 64px; }
+
+  /* Header */
+  .header {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .photo {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: #e9e6e3;
+    display: block;
+  }
+  h1 { font-weight: 700; color: var(--ink); font-size: 42px; line-height: 1.05; margin: 0 0 10px; }
+  .title-line { color: var(--ink); font-size: 19px; margin: 0; }
+  .edu-line { color: var(--muted); font-size: 16px; margin: 4px 0 0; }
+  .focus { margin: 16px 0 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .focus span {
+    background: var(--tag-bg);
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4px 10px;
+  }
+  .links { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; font-size: 16px; }
+  .resume-btn {
+    border: 1px solid var(--link);
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .resume-btn:hover { background: #f2f6fb; text-decoration: none; }
+  .resume-soon { border-color: var(--rule); color: var(--muted); font-weight: 400; cursor: default; }
+  .resume-soon:hover { background: none; }
+
+  h2 { font-weight: 400; color: var(--ink); font-size: 24px; margin: 40px 0 16px; }
+
+  /* Projects */
+  .projects { display: grid; gap: 18px; }
+  .project {
+    background: var(--card);
+    border-left: 3px solid var(--ink);
+    padding: 18px 22px;
+  }
+  .project h3 { margin: 0 0 4px; font-size: 19px; font-weight: 600; color: var(--ink); }
+  .meta { font-size: 14px; color: var(--muted); margin: 0 0 8px; }
+  .project p { margin: 0 0 8px; }
+  .project .q { font-style: italic; }
+  .project .methods { font-size: 15px; color: var(--muted); }
+  .project .proj-links { font-size: 15px; margin: 0; }
+  .status { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; font-weight: 600; color: #8a6d3b; margin-left: 6px; }
+
+  .about p { margin: 0 0 14px; max-width: 70ch; }
+
+  footer {
+    margin-top: 40px;
+    border-top: 1px solid var(--rule);
+    padding-top: 14px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 680px) {
+    .page { padding: 28px 16px 48px; }
+    .header { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+    .photo { width: 140px; }
+    h1 { font-size: 34px; }
+  }
 </style>
 </head>
 <body>
-<h1>Susan Yousuf</h1>
-<p class="subtitle">M.S. in Data Science &middot; American University</p>
-<p class="details">Applied Public Affairs Concentration &middot; Expected May 2027</p>
-<p class="details">Causal Inference &middot; Machine Learning &middot; Survey Methodology &middot; Policy Analysis</p>
-<hr>
-<p>Much of my work has happened where health care meets everyday life: coordinating fertility treatment, leading on-site operations for community COVID-19 testing, and supporting patients through rehabilitation. Those settings taught me that health is rarely decided in the exam room alone. It is shaped by policy, by access, and by the circumstances people bring with them.</p>
-<p>At George Mason University, where I earned a B.S. in Community Health, I began studying those forces more formally as a research assistant on projects examining maternal healthcare experiences and barriers to care. I came away convinced that the questions that matter most in public health are also among the hardest to answer well.</p>
-<p>I'm now pursuing an M.S. in Data Science at American University, concentrating in Applied Public Affairs, where I focus on program evaluation and the economics of policy. My training centers on causal inference, survey methodology, and machine learning, toward a simple aim: evidence that communities and decision-makers can trust. As a Graduate Teaching Assistant for Biostatistics and Statistical Machine Learning, I also help other students learn these methods.</p>
-<p>The questions that drew me here haven't changed. I'm learning how to answer them well.</p>
+<div class="page">
 
-<h2>Research &amp; Projects</h2>
-<p class="muted">Coming soon.</p>
+  <header class="header">
+    <!-- Replace photo.jpg with your headshot (square crop works best) -->
+    <img class="photo" src="photo.jpg" alt="Susan Yousuf">
+    <div>
+      <h1>Susan Yousuf</h1>
+      <p class="title-line">M.S. in Data Science · American University</p>
+      <p class="edu-line">Applied Public Affairs Concentration · Expected May 2027</p>
+      <div class="focus">
+        <span>Causal Inference</span>
+        <span>Machine Learning</span>
+        <span>Survey Methodology</span>
+        <span>Policy Analysis</span>
+      </div>
+      <div class="links">
+        <!-- When ready: change to <a class="resume-btn" href="resume.pdf">Resume</a> -->
+        <span class="resume-btn resume-soon" aria-disabled="true">Resume · coming soon</span>
+        <a href="mailto:susan@susanyousuf.com">susan@susanyousuf.com</a>
+        <a href="https://github.com/susanyousuf">GitHub</a>
+        <a href="https://linkedin.com/in/susanyousuf">LinkedIn</a>
+        <a href="https://x.com/susanyousuf">X</a>
+      </div>
+    </div>
+  </header>
 
-<p class="link-row">
-    <a href="https://github.com/susanyousuf" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <span class="separator">|</span>
-    <a href="https://linkedin.com/in/susanyousuf" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <span class="separator">|</span>
-    <a href="https://x.com/susanyousuf" target="_blank" rel="noopener noreferrer">X</a>
-</p>
-<p>Contact: <a href="mailto:susan@susanyousuf.com">susan@susanyousuf.com</a></p>
-<hr>
-<footer>Last updated: October 2026</footer>
+  <section class="about">
+    <h2>About</h2>
+    <p>Much of my work has happened where health care meets everyday life: coordinating fertility treatment, leading on-site operations for community COVID-19 testing, and supporting patients through rehabilitation. Those settings taught me that health is rarely decided in the exam room alone. It is shaped by policy, by access, and by the circumstances people bring with them.</p>
+    <p>At George Mason University, where I earned a B.S. in Community Health, I began studying those forces more formally as a research assistant on projects examining maternal healthcare experiences and barriers to care. I came away convinced that the questions that matter most in public health are also among the hardest to answer well.</p>
+    <p>I'm now pursuing an M.S. in Data Science at American University, concentrating in Applied Public Affairs, where I focus on program evaluation and the economics of policy. My training centers on causal inference, survey methodology, and machine learning, toward a simple aim: evidence that communities and decision-makers can trust. As a Graduate Teaching Assistant for Biostatistics and Statistical Machine Learning, I also help other students learn these methods.</p>
+    <p>The questions that drew me here haven't changed. I'm learning how to answer them well.</p>
+  </section>
+
+  <!-- Add a "Projects" section here later -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p><em>Coming soon.</em></p>
+  </section>
+
+  <footer>Last updated: October 2026</footer>
+</div>
 </body>
 </html>
