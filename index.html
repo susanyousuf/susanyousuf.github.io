@@ -11,8 +11,28 @@
 <meta property="og:description" content="M.S. Data Science student at American University studying causal inference, survey methodology, and machine learning for health and public policy.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://susanyousuf.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Susan Yousuf",
+  "url": "https://susanyousuf.com/",
+  "email": "mailto:susan@susanyousuf.com",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "American University"
+  },
+  "knowsAbout": ["Data Science", "Machine Learning", "Causal Inference", "Survey Methodology", "Policy Analysis", "Public Health"],
+  "sameAs": [
+    "https://github.com/susanyousuf",
+    "https://linkedin.com/in/susanyousuf",
+    "https://x.com/susanyousuf"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #ffffff;
@@ -29,55 +49,28 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: "Outfit", system-ui, sans-serif;
-    font-weight: 300;
+    font-family: "Source Sans 3", system-ui, sans-serif;
+    font-weight: 400;
     font-size: 17px;
     line-height: 1.6;
   }
   a { color: var(--link); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  .page { max-width: 980px; margin: 0 auto; padding: 48px 24px 64px; }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 24px 64px; }
 
   /* Header */
   .header {
-    display: grid;
-    grid-template-columns: 200px minmax(0, 1fr);
-    gap: 32px;
-    align-items: start;
     padding-bottom: 32px;
     border-bottom: 1px solid var(--rule);
   }
-  .photo {
-    width: 200px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    background: #e9e6e3;
-    display: block;
-  }
-  h1 { font-weight: 700; color: var(--ink); font-size: 42px; line-height: 1.05; margin: 0 0 10px; }
+  h1 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; color: var(--ink); font-size: 42px; line-height: 1.05; margin: 0 0 10px; }
   .title-line { color: var(--ink); font-size: 19px; margin: 0; }
   .edu-line { color: var(--muted); font-size: 16px; margin: 4px 0 0; }
-  .focus { margin: 16px 0 18px; display: flex; flex-wrap: wrap; gap: 8px; }
-  .focus span {
-    background: var(--tag-bg);
-    color: var(--ink);
-    font-size: 14px;
-    font-weight: 400;
-    padding: 4px 10px;
-  }
+  .focus { margin: 14px 0 18px; color: var(--ink); font-size: 16px; font-style: italic; }
   .links { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; font-size: 16px; }
-  .resume-btn {
-    border: 1px solid var(--link);
-    padding: 8px 18px;
-    font-weight: 600;
-    font-size: 15px;
-  }
-  .resume-btn:hover { background: #f2f6fb; text-decoration: none; }
-  .resume-soon { border-color: var(--rule); color: var(--muted); font-weight: 400; cursor: default; }
-  .resume-soon:hover { background: none; }
 
-  h2 { font-weight: 400; color: var(--ink); font-size: 24px; margin: 40px 0 16px; }
+  h2 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; color: var(--ink); font-size: 24px; margin: 40px 0 16px; }
 
   /* Projects */
   .projects { display: grid; gap: 18px; }
@@ -86,7 +79,7 @@
     border-left: 3px solid var(--ink);
     padding: 18px 22px;
   }
-  .project h3 { margin: 0 0 4px; font-size: 19px; font-weight: 600; color: var(--ink); }
+  .project h3 { font-family: "Source Serif 4", Georgia, serif; margin: 0 0 4px; font-size: 19px; font-weight: 600; color: var(--ink); }
   .meta { font-size: 14px; color: var(--muted); margin: 0 0 8px; }
   .project p { margin: 0 0 8px; }
   .project .q { font-style: italic; }
@@ -106,8 +99,6 @@
 
   @media (max-width: 680px) {
     .page { padding: 28px 16px 48px; }
-    .header { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-    .photo { width: 140px; }
     h1 { font-size: 34px; }
   }
 </style>
@@ -116,21 +107,12 @@
 <div class="page">
 
   <header class="header">
-    <!-- Replace photo.jpg with your headshot (square crop works best) -->
-    <img class="photo" src="photo.jpg" alt="Susan Yousuf">
     <div>
       <h1>Susan Yousuf</h1>
       <p class="title-line">M.S. in Data Science · American University</p>
       <p class="edu-line">Applied Public Affairs Concentration · Expected May 2027</p>
-      <div class="focus">
-        <span>Causal Inference</span>
-        <span>Machine Learning</span>
-        <span>Survey Methodology</span>
-        <span>Policy Analysis</span>
-      </div>
+      <p class="focus">Causal Inference · Machine Learning · Survey Methodology · Policy Analysis</p>
       <div class="links">
-        <!-- When ready: change to <a class="resume-btn" href="resume.pdf">Resume</a> -->
-        <span class="resume-btn resume-soon" aria-disabled="true">Resume · coming soon</span>
         <a href="mailto:susan@susanyousuf.com">susan@susanyousuf.com</a>
         <a href="https://github.com/susanyousuf">GitHub</a>
         <a href="https://linkedin.com/in/susanyousuf">LinkedIn</a>
@@ -141,9 +123,9 @@
 
   <section class="about">
     <h2>About</h2>
-    <p>Much of my work has happened where health care meets everyday life: coordinating fertility treatment, leading on-site operations for community COVID-19 testing, and supporting patients through rehabilitation. Those settings taught me that health is rarely decided in the exam room alone. It is shaped by policy, by access, and by the circumstances people bring with them.</p>
+    <p>Much of my work has happened where health care meets everyday life: coordinating fertility treatment, leading on-site operations for community COVID-19 testing, and guiding patients through rehabilitation. Those settings taught me that health is rarely decided in the exam room alone. It is shaped by policy, by access, and by the circumstances people bring with them.</p>
     <p>At George Mason University, where I earned a B.S. in Community Health, I began studying those forces more formally as a research assistant on projects examining maternal healthcare experiences and barriers to care. I came away convinced that the questions that matter most in public health are also among the hardest to answer well.</p>
-    <p>I'm now pursuing an M.S. in Data Science at American University, concentrating in Applied Public Affairs, where I focus on program evaluation and the economics of policy. My training centers on causal inference, survey methodology, and machine learning, toward a simple aim: evidence that communities and decision-makers can trust. As a Graduate Teaching Assistant for Biostatistics and Statistical Machine Learning, I also help other students learn these methods.</p>
+    <p>To build the tools needed for those answers, I'm pursuing an M.S. in Data Science at American University, concentrating in Applied Public Affairs, where I focus on program evaluation and the economics of policy. My training centers on causal inference, survey methodology, and machine learning, toward a simple aim: evidence that communities and decision-makers can trust. As a Graduate Teaching Assistant for Biostatistics and Statistical Machine Learning, I also help other students learn these methods.</p>
     <p>The questions that drew me here haven't changed. I'm learning how to answer them well.</p>
   </section>
 
